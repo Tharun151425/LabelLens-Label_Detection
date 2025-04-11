@@ -1,75 +1,125 @@
-## **LabelLens - Label Detection Using Machine Learning** 📷
+# 🏷️ LabelLens - ML-Powered Label Inspection using Image Recognition
 
-![Python](https://img.shields.io/badge/Python-3.12.2-blue?style=for-the-badge)  
-![Libraries](https://img.shields.io/badge/Libraries-torch%20%7C%20numpy%20%7C%20opencv--python%20%7C%20customtkinter%20%7C%20Pillow-blue?style=for-the-badge)   
-![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20MacOS-green?style=for-the-badge)
+LabelLens is a real-time label detection application using YOLOv5 for image recognition. It detects product labels, such as Samsung and OnePlus, in camera feeds and provides immediate feedback on the results.
+
 ---
+
+## 📖 Overview
+
+LabelLens uses a real-time camera feed to detect product labels with YOLOv5. The app supports multiple brands and displays a pass or fail result based on label detection accuracy.
+
+---
+
+## 🛠️ Key Features
+- **Real-Time Label Detection:** Detects labels instantly in the camera feed.
+- **Multi-Brand Support:** Supports Samsung, OnePlus, and more.
+- **Instant Feedback:** Shows pass or fail results in real-time.
+- **Interactive UI:** Easily switch between label categories.
+- **Responsive UI:** Adapts to different screen sizes using `customtkinter`.
+
+---
+
+## ⚙️ Tech Stack
+- **Python:** For development and compatibility.
+- **YOLOv5 (PyTorch):** Real-time object detection model.
+- **OpenCV:** Handles video feed and frame processing.
+- **customtkinter:** Modern UI framework.
+- **PIL:** Image processing and conversion.
+- **NumPy:** Numerical operations for image data.
+- **Requests:** Used for network operations.
+
+---
+
 ## 🖼️ **Project Demo**  
 👉 Screenshots of the GUI application are provided below:
 
 ![App Screenshot 1](images/pass_run.png)  
 
 ![App Screenshot 2](images/fail_run.png) 
----
-## Features 🚀
-
-- **Real-time Label Detection:** Detects product labels in real-time using a webcam. 
-
-- **Customizable Label Sets:** Choose between different label sets (e.g., Samsung, OnePlus, or all available labels) for inspection.
-
-- **Pass/Fail Detection:** Displays whether all labels are correctly detected with "PASS" or "FAIL" status.
-
-- **Dynamic GUI:** Built with customtkinter for an interactive and visually appealing interface.
-
-- **Machine Learning Integration:** Utilizes YOLOv5 for accurate and efficient object detection.
 
 ---
+## 📥 Installation and Usage
 
-## Usage 📦
+Follow these steps to install and set up the LabelLens app on your system:
 
-1. Run the `app.py` script to start the application:
-    ```bash
-    python app.py
+### Prerequisites
+
+Before installing, make sure you have the following installed:
+- Python 3.8 or above
+- pip (Python's package installer)
+- Git (to clone the repository)
+
+### Steps to Install
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/Tharun151425/LabelLens-Label_Detection.git
+   cd LabelLens-Label_Detection
+   ```
+2. Create a virtual environment (optional but recommended):
     ```
-
-2. Select a label set (All, Samsung, or OnePlus) using the dropdown in the GUI.
-
-3. The webcam feed will show in real-time. The application will automatically detect and label items according to the selected set.
-
-4. The status will update to "PASS" if all required labels are detected; otherwise, it will show "FAIL".
-
-5. Press **'P'** to pause and resume the webcam feed.
-
-6. Click **EXIT** to close the application.
+    python3 -m venv venv
+    source venv/bin/activate   # For Linux/Mac
+    venv\Scripts\activate      # For Windows
+    ```
+3. Install dependencies:
+    Install the required Python libraries using pip:
+   ```
+   pip install -r requirements.txt
+   ```
+4. Download the YOLOv5 model weights:
+    The YOLOv5 model weights are required for label detection. You can download them from the provided location or place them directly in the weights/ directory.
+   ```
+   mkdir weights
+    # Download the YOLOv5 model weights and place it in the weights directory
+   ```
+5 . Running the Application
+    Once the installation is complete, you can use the LabelLens app by running the following command:
+   ```
+    python app.py
+   ```
 
 ---
 
 ## Files 📂
 
 - **app.py:** Main Python script to run the application.
-
 - **requirements.txt:** Contains all necessary libraries to run the project.
-
 - **weights/last.pt:** Pre-trained YOLOv5 model weights (ensure this file is present in the `weights/` directory).
-
 - **images:** Folder containing images for the background, check and cross icons, exit button, etc.
 
 ---
 
-## Dependencies 📚
+## 🤝 Collaborators
+This project is open for collaboration! Feel free to fork the repository, contribute, and help enhance the LabelLens project.
 
-- `requests>=2.28.1` - For HTTP requests.
-- `customtkinter>=5.0.1` - For building the GUI with tkinter.
-- `Pillow>=9.3.0` - For image manipulation.
-- `opencv-python>=4.7.0.72` - For webcam and image processing.
-- `torch>=2.0.0` - For running the YOLOv5 model.
-- `numpy>=1.23.5` - For array and matrix operations.
+### Current Collaborators:
+
+- **Tharun Krishna M** - [GitHub Profile](https://github.com/Tharun151425)
+- **Yeshas Raju** - [GitHub Profile](https://github.com/YeshasRaju))
+
+### How to Contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push to your branch (`git push origin feature-name`).
+5. Open a pull request.
+6. Your contribution will be reviewed and merged if accepted.
+
+Feel free to add issues or feature requests if you encounter any bugs or need additional functionality!
+
 ---
-## Contributing 🤝
+## 📬 Contact Me
 
-- Feel free to fork the repository, make changes, and submit a pull request. Contributions are welcome to enhance label detection accuracy, improve the UI, or add more label sets.
----
-## About the Developers 👨‍💻👩‍💻  
+If you have any questions, suggestions, or just want to connect, feel free to reach out!
 
-- This project was collaboratively developed by **Tharunkrishna M** and teammate **Yeshas Raju**, leveraging their expertise in Python, machine learning, and GUI development to create an innovative label detection application
+- 📧 **Email**: [tharun151425@gmail.com](mailto:tharun151425@gmail.com)
+- 🔗 **LinkedIn**: [Tharun Krishna M](https://www.linkedin.com/in/tharunkrishna-m/)
+- 🧑‍💻 **GitHub**: [Tharun151425](https://github.com/Tharun151425)
+- 💻 **LeetCode**: [Tharun151425](https://leetcode.com/u/tharun151425/)
+
+I'm always open to discussing ideas, potential collaborations, or new opportunities. Don’t hesitate to get in touch!
+
 ---
